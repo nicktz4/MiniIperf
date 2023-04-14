@@ -12,5 +12,6 @@ int miniIperf_connect(miniIperf_sock_t *socket, const struct sockaddr *address,
     printf("Connected\n");
     
 
+    return 1;
 
 }

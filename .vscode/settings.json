@@ -6,6 +6,9 @@
         "ifaddrs.h": "c",
         "stdlib.h": "c",
         "types.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "miniiperf_time.h": "c",
+        "utils.h": "c",
+        "stddef.h": "c"
     }
 }

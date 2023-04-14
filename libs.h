@@ -14,14 +14,17 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <math.h>
 #include <poll.h>
 #include <assert.h>
 #include <signal.h>
 #include "utils.h"
+#include "miniIperf_time.h"
 
 #define MESSAGE_TYPE 33
-#define CHUNK_SIZE 16384
+#define CHUNK_SIZE 65400
 #define DEFAULT_PORT 8080
+#define USEC_PER_SEC 1000000
 
 typedef enum
 {
@@ -49,6 +52,7 @@ typedef struct
     uint32_t data_len; /*(Data length in bytes) (Excluding header)*/
     uint32_t checksum;
     uint16_t windowSize;
+    struct miniIperf_time timestamp;
     miniIperf_packet_type_t message_type;
 
 } miniIperf_header_t;
