@@ -9,15 +9,15 @@ struct miniIperf_time {
     uint32_t usec;
 };
 
-int miniIperfTimeNow(struct miniIperf_time *);
+struct miniIperf_time miniIperfTimeNow();
 
 
-uint64_t miniIperfTimeInUsec(struct miniIperf_time *);
+uint64_t miniIperfTimeInUsec(struct miniIperf_time );
 
-double miniIperfTimeInSec(struct miniIperf_time *);
+double miniIperfTimeInSec(struct miniIperf_time );
 
-void miniIperfTimePrint(struct miniIperf_time *);
+void miniIperfTimePrint(struct miniIperf_time);
 
-void miniIperfTimeDiff(struct miniIperf_time *, struct miniIperf_time *,struct miniIperf_time *);
+struct miniIperf_time  miniIperfTimeDiff(struct miniIperf_time start, struct miniIperf_time end);
 
 #endif
